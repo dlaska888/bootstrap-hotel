@@ -12,87 +12,6 @@
                 id="carouselMainIndicators"
                 class="carousel slide carousel-fade"
             >
-                <nav
-                    class="navbar navbar-expand-lg bg-body-tertiary p-0 m-0 d-flex w-100 justify-content-around"
-                >
-                    <div class="container-fluid p-0">
-                        <button
-                            type="button"
-                            class="navbar-button"
-                            data-bs-target="#carouselMainIndicators"
-                            data-bs-slide-to="0"
-                        >
-                            <img
-                                src="/common/img/logo.png"
-                                alt="Logo"
-                                width="120"
-                                height="100"
-                                class="d-inline-block align-text-top px-2"
-                            />
-                        </button>
-
-                        <button
-                            class="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavAltMarkup"
-                            aria-controls="navbarNavAltMarkup"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div
-                            class="collapse navbar-collapse"
-                            id="navbarNavAltMarkup"
-                        >
-                            <div
-                                class="navbar-nav w-100 justify-content-around d-flex"
-                            >
-                                <button
-                                    type="button"
-                                    class="navbar-button"
-                                    data-bs-target="#carouselMainIndicators"
-                                    data-bs-slide-to="0"
-                                >
-                                    Strona Główna
-                                </button>
-                                <button
-                                    type="button"
-                                    class="navbar-button"
-                                    data-bs-target="#carouselMainIndicators"
-                                    data-bs-slide-to="1"
-                                >
-                                    Pokoje
-                                </button>
-                                <button
-                                    type="button"
-                                    class="navbar-button"
-                                    data-bs-target="#carouselMainIndicators"
-                                    data-bs-slide-to="2"
-                                >
-                                    Rezerwacja
-                                </button>
-                                <button
-                                    type="button"
-                                    class="navbar-button"
-                                    data-bs-target="#carouselMainIndicators"
-                                    data-bs-slide-to="3"
-                                >
-                                    Kontakt
-                                </button>
-                                <button
-                                    type="button"
-                                    class="navbar-button"
-                                    data-bs-target="#carouselMainIndicators"
-                                    data-bs-slide-to="4"
-                                >
-                                    O nas
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
                 <div class="carousel-indicators">
                     <button
                         type="button"
@@ -128,6 +47,90 @@
                     ></button>
                 </div>
                 <div class="carousel-inner">
+                    <nav
+                        id="navbar_id"
+                        class="navbar navbar-expand-lg bg-body-tertiary w-100 p-0 m-0"
+                    >
+                        <div class="container-fluid p-0">
+                            <div class="col-lg-1 col-sm-2 col-md-2 col-2">
+                                <button
+                                    type="button"
+                                    class="btn btn-link"
+                                    data-bs-target="#carouselMainIndicators"
+                                    data-bs-slide-to="0"
+                                >
+                                    <img
+                                        class="img-fluid align-text-top"
+                                        src="/common/img/logo.png"
+                                        alt="Logo"
+                                    />
+                                </button>
+                            </div>
+
+                            <button
+                                id="navbar-toggle-btn"
+                                class="navbar-toggler mx-2"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup"
+                                aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div
+                                class="collapse navbar-collapse"
+                                id="navbarNavAltMarkup"
+                            >
+                                <div
+                                    class="navbar-nav w-100 d-flex justify-content-around"
+                                >
+                                    <button
+                                        type="button"
+                                        class="navbar-button"
+                                        data-bs-target="#carouselMainIndicators"
+                                        data-bs-slide-to="0"
+                                    >
+                                        Strona Główna
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="navbar-button"
+                                        data-bs-target="#carouselMainIndicators"
+                                        data-bs-slide-to="1"
+                                    >
+                                        Pokoje
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="navbar-button"
+                                        data-bs-target="#carouselMainIndicators"
+                                        data-bs-slide-to="2"
+                                    >
+                                        Rezerwacja
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="navbar-button"
+                                        data-bs-target="#carouselMainIndicators"
+                                        data-bs-slide-to="3"
+                                    >
+                                        Kontakt
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="navbar-button"
+                                        data-bs-target="#carouselMainIndicators"
+                                        data-bs-slide-to="4"
+                                    >
+                                        O nas
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
                     <div class="carousel-item bg-body active">
                         <div
                             class="col d-flex justify-content-center backgrounding"
@@ -145,11 +148,139 @@
                     </div>
                     <div class="carousel-item bg-body">
                         <div
-                            class="col d-flex justify-content-center backgrounding"
+                            class="col-4 d-flex justify-content-center backgrounding"
                             style="
                                 background-image: url(/common/img/hotel_zalewski_pokj_deluxe.jpg);
                             "
-                        ></div>
+                        >
+                            <div class="col-xs-12 col-md-4 d-flex align-self-center justify-content-center ">
+                                <div
+                                class="accordion accordion-flush bg-transparent w-75 align-self-center"
+                                id="accordionExample"
+                            >
+                                <div
+                                    class="accordion-item bg-transparent border-1"
+                                >
+                                    <h2 class="accordion-header bg-transparent">
+                                        <button
+                                            class="accordion-button bg-transparent text-white"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                        >
+                                            Accordion Item #1
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseOne"
+                                        class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample"
+                                    >
+                                        <div class="accordion-body">
+                                            <strong
+                                                >This is the first item's
+                                                accordion body.</strong
+                                            >
+                                            It is shown by default, until the
+                                            collapse plugin adds the appropriate
+                                            classes that we use to style each
+                                            element. These classes control the
+                                            overall appearance, as well as the
+                                            showing and hiding via CSS
+                                            transitions. You can modify any of
+                                            this with custom CSS or overriding
+                                            our default variables. It's also
+                                            worth noting that just about any
+                                            HTML can go within the
+                                            <code>.accordion-body</code>, though
+                                            the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo"
+                                        >
+                                            Accordion Item #2
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseTwo"
+                                        class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample"
+                                    >
+                                        <div class="accordion-body">
+                                            <strong
+                                                >This is the second item's
+                                                accordion body.</strong
+                                            >
+                                            It is hidden by default, until the
+                                            collapse plugin adds the appropriate
+                                            classes that we use to style each
+                                            element. These classes control the
+                                            overall appearance, as well as the
+                                            showing and hiding via CSS
+                                            transitions. You can modify any of
+                                            this with custom CSS or overriding
+                                            our default variables. It's also
+                                            worth noting that just about any
+                                            HTML can go within the
+                                            <code>.accordion-body</code>, though
+                                            the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree"
+                                            aria-expanded="false"
+                                            aria-controls="collapseThree"
+                                        >
+                                            Accordion Item #3
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseThree"
+                                        class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample"
+                                    >
+                                        <div class="accordion-body">
+                                            <strong
+                                                >This is the third item's
+                                                accordion body.</strong
+                                            >
+                                            It is hidden by default, until the
+                                            collapse plugin adds the appropriate
+                                            classes that we use to style each
+                                            element. These classes control the
+                                            overall appearance, as well as the
+                                            showing and hiding via CSS
+                                            transitions. You can modify any of
+                                            this with custom CSS or overriding
+                                            our default variables. It's also
+                                            worth noting that just about any
+                                            HTML can go within the
+                                            <code>.accordion-body</code>, though
+                                            the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                        </div>
                     </div>
                     <div class="carousel-item bg-body">
                         <div
@@ -178,5 +309,6 @@
         </div>
 
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/common/js/script.js"></script>
     </body>
 </html>

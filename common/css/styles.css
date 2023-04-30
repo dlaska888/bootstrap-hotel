@@ -10342,26 +10342,11 @@ textarea.form-control-lg {
 }
 
 /* End of fix */
-.backgrounding {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-}
-.backgrounding::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+html {
   height: 100%;
-  background-color: black;
-  opacity: 0.2;
-  z-index: 1;
 }
-.backgrounding > * {
-  z-index: 100;
+html body {
+  min-height: 100%;
 }
 
 .navbar {
@@ -10385,8 +10370,9 @@ textarea.form-control-lg {
 .navbar .navbar-button {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.navbar .navbar-button:active {
-  outline: none;
+
+.accordion {
+  z-index: 10;
 }
 
 .carousel-item {
@@ -10395,7 +10381,29 @@ textarea.form-control-lg {
   max-height: 100vh;
 }
 
-.small-text-shadow {
+.backgrounding {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+.backgrounding::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 1;
+}
+.backgrounding > * {
+  z-index: 100;
+}
+
+.small-text-shadow, .navbar .navbar-button {
   text-shadow: 2px 2px black;
 }
 
