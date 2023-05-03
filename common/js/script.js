@@ -1,11 +1,15 @@
-var elements = document.getElementsByClassName("navbar-button");
+// Navbar closing logic
+var navbarToggleBtn = document.getElementById("navbar-toggle-btn");
+var navItems = document.getElementsByClassName("nav-item");
 
 var closeMenu = function() {
-    if (document.getElementById("navbarNavAltMarkup").classList.contains("show")) {
-        document.getElementById("navbar-toggle-btn").click();
+    if (document.getElementById("navbarSupportedContent").classList.contains("show")) {
+        navbarToggleBtn.click();
     }
 };
 
-for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', closeMenu, false);
+for (var i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener('click', closeMenu, false);
 }
+
+navbarToggleBtn.addEventListener('focusout', () => closeMenu());
