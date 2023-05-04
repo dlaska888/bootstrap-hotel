@@ -84,7 +84,9 @@
                         Pokoje
                     </div>
                 </div>
-                <div class="card w-75 m-5 border-0 bg-white bg-opacity-100">
+                <div
+                    class="card w-75 m-5 border-0 bg-transparent align-self-center"
+                >
                     <div
                         id="carousel-rooms-1"
                         class="carousel slide carousel-rooms"
@@ -168,9 +170,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="card w-75 m-5 border-0 bg-white bg-opacity-75">
+                <div
+                    class="card w-75 m-5 border-0 bg-transparent align-self-center"
+                >
                     <div
-                        id="carousel-rooms-1"
+                        id="carousel-rooms-2"
                         class="carousel slide carousel-rooms"
                     >
                         <div class="carousel-inner">
@@ -199,7 +203,7 @@
                         <button
                             class="carousel-control-prev"
                             type="button"
-                            data-bs-target="#carousel-rooms-1"
+                            data-bs-target="#carousel-rooms-2"
                             data-bs-slide="prev"
                         >
                             <span
@@ -211,7 +215,7 @@
                         <button
                             class="carousel-control-next"
                             type="button"
-                            data-bs-target="#carousel-rooms-1"
+                            data-bs-target="#carousel-rooms-2"
                             data-bs-slide="next"
                         >
                             <span
@@ -225,7 +229,7 @@
                         <div
                             class="fs-1 text-center text-primary align-self-center font-family-brush"
                         >
-                            Apartament 1
+                            Apartament 2
                         </div>
                         <p class="fs-5 card-text mx-3 my-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -252,9 +256,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="card w-75 m-5 border-0 bg-white bg-opacity-75">
+                <div
+                    class="card w-75 m-5 border-0 bg-transparent align-self-center"
+                >
                     <div
-                        id="carousel-rooms-1"
+                        id="carousel-rooms-3"
                         class="carousel slide carousel-rooms"
                     >
                         <div class="carousel-inner">
@@ -283,7 +289,7 @@
                         <button
                             class="carousel-control-prev"
                             type="button"
-                            data-bs-target="#carousel-rooms-1"
+                            data-bs-target="#carousel-rooms-3"
                             data-bs-slide="prev"
                         >
                             <span
@@ -295,7 +301,7 @@
                         <button
                             class="carousel-control-next"
                             type="button"
-                            data-bs-target="#carousel-rooms-1"
+                            data-bs-target="#carousel-rooms-3"
                             data-bs-slide="next"
                         >
                             <span
@@ -309,7 +315,7 @@
                         <div
                             class="fs-1 text-center text-primary align-self-center font-family-brush"
                         >
-                            Apartament 1
+                            Apartament 3
                         </div>
                         <p class="fs-5 card-text mx-3 my-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -339,7 +345,7 @@
             </div>
             <div
                 id="reservation-page"
-                class="col d-flex flex-column justify-content-center"
+                class="col d-flex flex-column"
             >
                 <div id="reservation-title" class="col-auto">
                     <div
@@ -355,9 +361,12 @@
                     <p class="m-0">Zadzwoń</p>
                     <p class="m-0">+48 123 123 123</p>
                 </a>
+                <div class="col-4-lg col-6-md mt-5 p-3"></div>
                 <a
-                    class="fs-3 col-4-lg col-6-md text-white btn btn-primary btn-lg align-self-center mt-5 p-3"
+                    class="fs-3 text-white btn btn-primary btn-lg align-self-center"
                     href="https://www.booking.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <p class="m-0">Zarezerwuj na booking.com</p>
                 </a>
@@ -377,18 +386,29 @@
                     id="contact-body"
                     class="col-4-md col-8-sm align-self-center small-text-shadow bg-black bg-opacity-25 p-lg-5 p-3"
                 >
-                    <div class="text-white fs-3">
+                    <div class="text-white fs-4">
                         <i class="bi bi-house me-3"></i>Wysowa-Zdrój 106
                     </div>
-                    <div class="text-white fs-3 mt-3">
+                    <div class="text-white fs-4 mt-3">
                         <i class="bi bi-telephone me-3"></i>+48 123 123 123
                     </div>
-                    <div class="text-white fs-3 mt-3">
+                    <div class="text-white fs-4 mt-3">
                         <i class="bi bi-envelope-at me-3"></i
                         >dawidlaska888@gmail.com
                     </div>
                 </div>
+                <div class="map-container col-6 align-self-center my-5 w-50 h-50 d-flex justify-content-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.5049474049874!2d21.17208207650809!3d49.43717265980192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473dd690df17f613%3A0xa0e2309547b9b944!2sWysowa-Zdr%C3%B3j%20106%2C%2038-316%20Wysowa-Zdr%C3%B3j!5e0!3m2!1spl!2spl!4v1683194132902!5m2!1spl!2spl"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        
+                    ></iframe>
+                </div>
             </div>
+            
         </div>
 
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

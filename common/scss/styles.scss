@@ -21,13 +21,13 @@ $display-font-sizes: (
 
 // Then add additional custom code here
 
-@mixin bg-shadow($brightness, $position) {
+@mixin bg-color($color, $brightness, $position) {
     &::before {
         content: ""; // ::before and ::after both require content
         position: $position;
         width: 100%;
         height: 100%;
-        background-color: black;
+        background-color: $color;
         opacity: $brightness;
         z-index: -1;
     }
@@ -39,7 +39,7 @@ $display-font-sizes: (
 html {
     height: 100%;
     body {
-        @include bg-shadow(0.3, fixed);
+        @include bg-color(black, 0.3, fixed);
         min-height: 100%;
         background-image: url("/common/img/Apartament508sypialnia2.jpg");
         background-repeat: no-repeat;
@@ -50,7 +50,7 @@ html {
 }
 
 .navbar {
-    @include bg-shadow(0.3, absolute);
+    @include bg-color(black, 0.3, absolute);
 
     .nav-link {
         @extend .text-white, .text-center, .small-text-shadow, .fs-4, .mx-4;
@@ -72,30 +72,44 @@ html {
     }
 
     .card {
-        align-self: center;
+        @include bg-color(white, 0.9, absolute);
         border-radius: 1rem;
         border: none;
+
+        &::before {
+            border-radius: 1rem;
+            border: none;
+        }
     }
 
     .carousel-rooms .carousel-item {
         border-top-right-radius: 1rem;
         border-top-left-radius: 1rem;
-        object-fit: cover;
-        object-position: center;
-        max-height: 75vh;
+        border: none;
         overflow: hidden;
     }
 }
 
 #reservation-page {
+    #reservation-title {
+        margin-top: 9rem;
+    }
     .btn {
         opacity: 0.9;
     }
 }
 
 #contact-page {
-    #contact-body{
+    #contact-title {
+        margin-top: 9rem;
+    }
+
+    #contact-body {
         border-radius: 0.5rem;
+    }
+
+    .map-container{
+        overflow: hidden;
     }
 }
 

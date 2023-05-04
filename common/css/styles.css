@@ -10268,27 +10268,47 @@ html body > * {
   margin-top: 9rem;
 }
 #rooms-page .card {
-  align-self: center;
+  border-radius: 1rem;
+  border: none;
+}
+#rooms-page .card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.9;
+  z-index: -1;
+}
+#rooms-page .card > * {
+  z-index: 100;
+}
+#rooms-page .card::before {
   border-radius: 1rem;
   border: none;
 }
 #rooms-page .carousel-rooms .carousel-item {
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  max-height: 75vh;
+  border: none;
   overflow: hidden;
 }
 
+#reservation-page #reservation-title {
+  margin-top: 9rem;
+}
 #reservation-page .btn {
   opacity: 0.9;
 }
 
+#contact-page #contact-title {
+  margin-top: 9rem;
+}
 #contact-page #contact-body {
   border-radius: 0.5rem;
+}
+#contact-page .map-container {
+  overflow: hidden;
 }
 
 .small-text-shadow, .navbar .nav-link {
