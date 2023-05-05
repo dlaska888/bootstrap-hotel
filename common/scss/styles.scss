@@ -37,7 +37,7 @@ $display-font-sizes: (
 // }
 
 .bg-img {
-    //@include bg-color(black, 0.3, fixed);
+    @include bg-color(black, 0.3, fixed);
     background-image: url("/common/img/Apartament508sypialnia2.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ $display-font-sizes: (
 }
 
 .navbar {
-    //@include bg-color(black, 0.3, absolute);
+    @include bg-color(black, 0.3, absolute);
 
     .nav-link {
         @extend .text-white, .text-center, .small-text-shadow, .fs-4, .mx-4;
@@ -74,7 +74,7 @@ $display-font-sizes: (
     }
 
     .card {
-        //@include bg-color(white, 0.9, absolute);
+        @include bg-color(white, 0.9, absolute);
         border-radius: 1rem;
         border: none;
 
