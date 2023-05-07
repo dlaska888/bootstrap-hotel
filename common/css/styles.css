@@ -10242,6 +10242,9 @@ textarea.form-control-lg {
   position: absolute;
 }
 
+.navbar {
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
 .navbar::before {
   content: "";
   position: absolute;
@@ -10287,6 +10290,9 @@ textarea.form-control-lg {
 #rooms-page .card::before {
   border-radius: 1rem;
   border: none;
+}
+#rooms-page .card img {
+  max-height: 75vh;
 }
 #rooms-page .carousel-rooms .carousel-item {
   border-top-right-radius: 1rem;

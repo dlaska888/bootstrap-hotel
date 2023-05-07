@@ -64,6 +64,7 @@ $display-font-sizes: (
 
 .navbar {
     @include bg-color(black, 0.3, absolute);
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
 
     .nav-link {
         @extend .text-white, .text-center, .small-text-shadow, .fs-4, .mx-4;
@@ -92,6 +93,10 @@ $display-font-sizes: (
         &::before {
             border-radius: 1rem;
             border: none;
+        }
+
+        img{
+            max-height: 75vh;
         }
     }
 
