@@ -10243,7 +10243,7 @@ textarea.form-control-lg {
 }
 
 .navbar {
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  transition: top 0.3s ease-in-out; /* Transition effect when sliding down (and up) */
 }
 .navbar::before {
   content: "";
