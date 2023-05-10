@@ -20,18 +20,4 @@ for (var i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("click", closeMenu, false);
 }
 
-// close on scroll
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-
-    closeMenu();
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("top-navbar").style.top = "0px";
-    } else {
-        document.getElementById("top-navbar").style.top = "-10rem";
-    }
-    prevScrollpos = currentScrollPos;
-};
-
 // end navbar closing logic
