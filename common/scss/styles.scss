@@ -4,101 +4,146 @@
 // Include any default variable overrides here (though functions won't be available)
 
 $theme-colors: (
-    "primary": #ffffff,
-    "danger": red,
+    "primary": rgb(177, 115, 0),
 );
 
 $display-font-sizes: (
-    1: 10rem,
-    2: 4.5rem,
-    3: 4rem,
-    4: 3.5rem,
-    5: 3rem,
-    6: 2.5rem,
+    1: 9rem,
+    2: 6.5rem,
+    3: 6rem,
+    4: 5.5rem,
+    5: 4rem,
+    6: 3.5rem,
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
-/* Fix for flickering carousel */
-.carousel-inner .carousel-item {
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: block;
-    position: absolute;
-}
-.carousel-inner .carousel-item:first-of-type {
-    position: relative;
-}
-.carousel-inner .active {
-    opacity: 1;
-}
-/* End of fix */
-
 // Then add additional custom code here
 
-@mixin bg-shadow($brightness) {
+@mixin bg-color($color, $brightness, $position) {
     &::before {
         content: ""; // ::before and ::after both require content
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: $position;
         width: 100%;
         height: 100%;
-        background-color: black;
+        background-color: $color;
         opacity: $brightness;
-        z-index: 1;
+        z-index: -1;
     }
     & > * {
         z-index: 100;
     }
 }
 
-html {
-    height: 100%;
-    body {
-        min-height: 100%;
+.bg-img {
+    min-height: 100%;
+    background-image: url("/common/img/jezioro.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+
+    &::before {
+        content: ""; // ::before and ::after both require content
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.3;
+        z-index: 1;
     }
 }
 
-.navbar {
-    @include bg-shadow(0.2);
+.content {
     position: absolute;
-    z-index: 10;
+}
 
-    .navbar-button {
-        @extend .btn, .col-lg-2, .p-2, .fs-4, .text-white, .small-text-shadow;
+.navbar {
+    @include bg-color(black, 0.3, absolute);
+    transition: top 0.3s ease-in-out; /* Transition effect when sliding down (and up) */
+
+    .nav-link {
+        @extend .text-white, .text-center, .small-text-shadow, .fs-4, .mx-4;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
             sans-serif;
     }
 }
 
-.accordion{
-    z-index: 10;
+#main-page,
+#reservation-page,
+#contact-page,
+#rooms-page {
+    min-height: 100vh;
 }
 
-.carousel-item {
-    width: 100%;
-    height: 100%;
-    max-height: 100vh;
+#rooms-page {
+    #rooms-title {
+        margin-top: 9rem;
+    }
+
+    .card {
+        @include bg-color(white, 0.9, absolute);
+        border-radius: 1rem;
+        border: none;
+
+        &::before {
+            border-radius: 1rem;
+            border: none;
+        }
+
+        img {
+            max-height: 75vh;
+        }
+    }
+
+    .carousel-rooms .carousel-item {
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        border: none;
+        overflow: hidden;
+    }
 }
 
-.backgrounding {
-    @include bg-shadow(0.2);
+#reservation-page {
+    #reservation-title {
+        margin-top: 9rem;
+    }
+    .btn {
+        opacity: 0.8;
+    }
+}
 
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
+#contact-page {
+    #contact-title {
+        margin-top: 9rem;
+    }
+
+    #contact-body {
+        border-radius: 0.5rem;
+    }
+
+    .map-container {
+        overflow: hidden;
+    }
 }
 
 .small-text-shadow {
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px black;
 }
 
 .font-family-brush {
     font-family: brush script mt, cursive;
+}
+
+.font-family-gill-sans {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.no-select {
+    user-select: none;
 }
